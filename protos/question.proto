@@ -1,0 +1,16 @@
+syntax= "proto3";
+
+// Defining a Unary service currently 
+// Extend to Server/Client/Bidirectional Streaming RPCs in the future 
+// Details on what these are can be found at https://grpc.io/docs/guides/concepts.html
+service QuestionService {
+	rpc UnaryRequest(QuestionRequest) returns (QuestionResponse) {}
+}
+
+message QuestionRequest {
+	string query = 1;
+}
+
+message QuestionResponse {
+	string reply = 1;
+}
