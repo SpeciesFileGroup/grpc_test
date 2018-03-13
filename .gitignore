@@ -1,5 +1,5 @@
 **/*.pb.cc
 **/*.pb.h
-**/*
+**/*.pb.o
 **/*pb2.py 
 **/*pb2_grpc.py
