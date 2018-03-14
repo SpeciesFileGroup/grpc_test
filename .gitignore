@@ -1,5 +1,4 @@
-**/*.pb.cc
-**/*.pb.h
-**/*
-**/*pb2.py 
-**/*pb2_grpc.py
+# **/*.pb.cc
+# **/*.pb.h
+# **/*pb2.py 
+# **/*pb2_grpc.py
