@@ -5,7 +5,7 @@ Requires an installation of grpc and protoc. Installation instructions will depe
 To compile the .proto files: 
 Navigate to grpc_test/protos and run: 
 
-python -m grpc_tools.protoc -I. --python-out=../client --grpc_python_out=../client question.proto
+python -m grpc_tools.protoc -I. --python_out=../client --grpc_python_out=../client question.proto
 
 General instructions for the protoc compiler can be found here: 
 
