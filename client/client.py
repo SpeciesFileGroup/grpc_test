@@ -9,10 +9,10 @@ def run():
 	channel = grpc.insecure_channel('localhost:50051')
 	stub = qgrpc.QuestionServiceStub(channel)
 	response = stub.UnaryRequest(q.QuestionRequest(query="Hello?"))
-	if not response.message:
+	if not response:
 		print("Server connection has failed")
 	else:
-		print("Server response received: " + response.message)
+		print("Server response received: " + str(response))
 
 if __name__ == '__main__':
 	run()
