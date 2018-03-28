@@ -4,13 +4,16 @@ var protoDescriptor = grpc.load(PROTO_PATH);
 var routeguide = protoDescriptor.QuestionService;
 
 function UnaryRequest(call) {
-    for (var i = 0; i < 10; i++) {
+   console.log(call)
+   call.on('data', function(file) {
       var QuestionResponse = {
-        'reply': String(i)
+        'reply': file
       };
       call.write(QuestionResponse)
-    }
-  call.end()
+   });
+   call.on('end', function() {
+      call.end();
+   }); 
 } 
 
 function getServer() {

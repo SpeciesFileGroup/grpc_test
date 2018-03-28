@@ -2,6 +2,7 @@
 # The client asks each server a question, receives an answer from each server, and then concatenates their answers. 
 
 import grpc 
+import sys, time
 import question_pb2 as q
 import question_pb2_grpc as qgrpc
 import questionstream_pb2 as q1
@@ -16,16 +17,26 @@ def run():
 	else:
 		print("Server response received: " + str(response))
 
-def run_stream(): 
+def generate_stream():
+	# files = [f for f in listdir(directory) if isfile(join(directory, f))]
+
+	files = ['a','b','c']
+	for file in files:
+		yield q1.QuestionRequest(query = str(file))
+		time.sleep(0.2)
+
+def run_stream(directory): 
 	channel = grpc.insecure_channel('localhost:50051')
 	stub = qgrpc1.QuestionServiceStub(channel)
 	
-	question = q1.QuestionRequest(query="Hello?")
-	answers = stub.UnaryRequest(question)
-	print(answers)
+	answers = stub.UnaryRequest(generate_stream())
 
-	for answer in answers:
-		print("Server response received: " + str(answer))
+	try:
+		for answer in answers:
+			print(str(answer))
+	except grpc._channel._Rendezvous as err:
+		print(err)
 
 if __name__ == '__main__':
-	run_stream()
+	directory = sys.argv[1]
+	run_stream(directory)
