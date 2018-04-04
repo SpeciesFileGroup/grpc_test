@@ -1,10 +1,10 @@
 syntax= "proto3";
 
-// Defining a Unary service currently 
-// Extend to Server/Client/Bidirectional Streaming RPCs in the future 
 // Details on what these are can be found at https://grpc.io/docs/guides/concepts.html
+// 
 service QuestionService {
 	rpc UnaryRequest(QuestionRequest) returns (QuestionResponse) {}
+	rpc CountWordsInFile(stream FileStream) returns (stream WordCount) {} 
 }
 
 message QuestionRequest {
@@ -13,4 +13,12 @@ message QuestionRequest {
 
 message QuestionResponse {
 	string reply = 1;
+}
+
+message FileStream {
+	string file_name = 1;
+}
+
+message WordCount { 
+	int32 count = 1;
 }

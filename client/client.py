@@ -14,6 +14,8 @@ import questionstream_pb2_grpc as qgrpc1
 
 pp = pprint.PrettyPrinter(indent=4)
 
+"""
+# This isn't actually used for anything right now
 def run(): 
 	channel = grpc.insecure_channel('localhost:50051')
 	stub = qgrpc.QuestionServiceStub(channel)
@@ -22,6 +24,7 @@ def run():
 		print("Server connection has failed")
 	else:
 		print("Server response received: " + str(response))
+"""
 
 def generate_stream(files):
 	for file in files:

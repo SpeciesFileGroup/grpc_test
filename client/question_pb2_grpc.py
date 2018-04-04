@@ -5,9 +5,8 @@ import question_pb2 as question__pb2
 
 
 class QuestionServiceStub(object):
-  """Defining a Unary service currently 
-  Extend to Server/Client/Bidirectional Streaming RPCs in the future 
-  Details on what these are can be found at https://grpc.io/docs/guides/concepts.html
+  """Details on what these are can be found at https://grpc.io/docs/guides/concepts.html
+
   """
 
   def __init__(self, channel):
@@ -21,15 +20,26 @@ class QuestionServiceStub(object):
         request_serializer=question__pb2.QuestionRequest.SerializeToString,
         response_deserializer=question__pb2.QuestionResponse.FromString,
         )
+    self.CountWordsInFile = channel.stream_stream(
+        '/QuestionService/CountWordsInFile',
+        request_serializer=question__pb2.FileStream.SerializeToString,
+        response_deserializer=question__pb2.WordCount.FromString,
+        )
 
 
 class QuestionServiceServicer(object):
-  """Defining a Unary service currently 
-  Extend to Server/Client/Bidirectional Streaming RPCs in the future 
-  Details on what these are can be found at https://grpc.io/docs/guides/concepts.html
+  """Details on what these are can be found at https://grpc.io/docs/guides/concepts.html
+
   """
 
   def UnaryRequest(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def CountWordsInFile(self, request_iterator, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -43,6 +53,11 @@ def add_QuestionServiceServicer_to_server(servicer, server):
           servicer.UnaryRequest,
           request_deserializer=question__pb2.QuestionRequest.FromString,
           response_serializer=question__pb2.QuestionResponse.SerializeToString,
+      ),
+      'CountWordsInFile': grpc.stream_stream_rpc_method_handler(
+          servicer.CountWordsInFile,
+          request_deserializer=question__pb2.FileStream.FromString,
+          response_serializer=question__pb2.WordCount.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
