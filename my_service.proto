@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.alexandreesl.handson";
+option java_outer_classname = "MyServiceProto";
+option objc_class_prefix = "HLW";
+
+package handson;
+
+
+service MyService {
+
+    rpc MyMethod1 (MyRequest) returns (MyResponse) {
+    }
+
+    rpc MyMethod2 (MyRequest) returns (MyResponse) {
+    }
+
+    rpc MyMethod3 (stream MyRequest) returns (stream MyResponse) {
+    }
+
+}
+
+message MyRequest {
+    string filename = 1;
+    string filetext = 2;
+    int32 count = 3;
+}
+
+message MyResponse {
+    string filename = 1;
+    string filetext = 2;
+    int32 count = 3;
+}
