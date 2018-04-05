@@ -15,8 +15,8 @@ message QuestionResponse {
 	string reply = 1;
 }
 
-message FileStream {
-	string file_name = 1;
+message FileData {
+	string file_data = 1;
 }
 
 message WordCount { 
