@@ -1,0 +1,1 @@
+['SMITHSONIAN', 'EXPLORATION', 'IN', 'ALASKA', 'I', 'hi', 't', 'i', 'by', 'Collier', 'I', 'Cut', 'Bank', 'in', 'Yukon', 'Flats', 'Photo', 'by', 'Collier', 'Bluffs', 'of', 'Pleistocene', 'Silts', 'below', 'Lake', 'Lebarge', 'Yukon', 'River']

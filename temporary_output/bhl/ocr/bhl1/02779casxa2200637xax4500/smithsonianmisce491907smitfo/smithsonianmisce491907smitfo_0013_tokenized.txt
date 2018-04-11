@@ -1,0 +1,1 @@
+['SMITHSONIAN', 'MISCELLANEOUS', 'COLLECTIONS', 'Part', 'of', 'Volume', 'XLIX', 'Smithsonian', 'Exploration', 'in', 'Alaska', 'in', 'iQO', 'in', 'search', 'of', 'Mammoth', 'and', 'other', 'fossil', 'remains', 'BY', 'A', 'G', 'MADDREN', 'No', 'CITY', 'OF', 'WASHINGTON', 'PUBLISHED', 'BY', 'THE', 'SMITHSONIAN', 'INSTITUTION']

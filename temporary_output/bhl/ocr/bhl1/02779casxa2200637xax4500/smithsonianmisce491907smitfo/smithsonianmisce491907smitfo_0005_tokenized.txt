@@ -1,0 +1,1 @@
+['iA', 'i', 'SMITHSONIAN', 'MISCELLANEOUS', 'COLLECTIONS', 'VOL', 'XLIX', 'every', 'man', 'is', 'a', 'valuable', 'member', 'or', 'SOCIETY', 'WHO', 'BY', 'HIS', 'OBSERVATIONS', 'RESEARCH', 'AND', 'EXPERIMENTS', 'PROCURES', 'KNOWLEDGE', 'FOR', 'MEN', 'â', 'SMITHSON', '(No', ')', 'CITY', 'OF', 'WASHINGTON', 'PUBLISHED', 'BY', 'THE', 'SMITHSONIAN', 'INSTITUTION']

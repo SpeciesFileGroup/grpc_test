@@ -1,0 +1,1 @@
+['Abdruck', 'aus', 'der', 'Jenaischen', 'Zeitschrift', 'fÃ', 'r', 'Medicin', 'und', 'Naturwissenschaft', 'I', 'und', 'II', 'Bd']

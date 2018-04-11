@@ -1,0 +1,1 @@
+['PLATE', 'XII', 'Fig', 'Tentacular', 'crown', 'of', 'Phoronis', 'architecta', 'Showing', 'lophophoral', 'organs', 'epistome', 'and', 'mouth', 'Drawn', 'from', 'a', 'living', 'tentacular', 'crown', 'which', 'had', 'been', 'constricted', 'off', 'from', 'the', 'animal', 'X']

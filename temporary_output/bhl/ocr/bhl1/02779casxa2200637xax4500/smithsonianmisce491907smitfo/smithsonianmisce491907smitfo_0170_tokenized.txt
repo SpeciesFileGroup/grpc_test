@@ -1,0 +1,1 @@
+['WASHINGTON', 'D', 'C', 'PRESS', 'OF', 'JUDD', 'DETWEILER', 'INC']
