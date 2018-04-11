@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='question.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x0equestion.proto\" \n\x0fQuestionRequest\x12\r\n\x05query\x18\x01 \x01(\t\"!\n\x10QuestionResponse\x12\r\n\x05reply\x18\x01 \x01(\t2F\n\x0fQuestionService\x12\x33\n\x0cUnaryRequest\x12\x10.QuestionRequest\x1a\x11.QuestionResponseb\x06proto3')
+  serialized_pb=_b('\n\x0equestion.proto\" \n\x0fQuestionRequest\x12\r\n\x05query\x18\x01 \x01(\t\"!\n\x10QuestionResponse\x12\r\n\x05reply\x18\x01 \x01(\t2H\n\x0fQuestionService\x12\x35\n\x0cUnaryRequest\x12\x10.QuestionRequest\x1a\x11.QuestionResponse\"\x00\x62\x06proto3')
 )
 
 
@@ -113,7 +113,7 @@ _QUESTIONSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   options=None,
   serialized_start=87,
-  serialized_end=157,
+  serialized_end=159,
   methods=[
   _descriptor.MethodDescriptor(
     name='UnaryRequest',

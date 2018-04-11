@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='questionstream.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x14questionstream.proto\" \n\x0fQuestionRequest\x12\r\n\x05query\x18\x01 \x01(\t\"!\n\x10QuestionResponse\x12\r\n\x05reply\x18\x01 \x01(\t2J\n\x0fQuestionService\x12\x37\n\x0cUnaryRequest\x12\x10.QuestionRequest\x1a\x11.QuestionResponse\"\x00\x30\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x14questionstream.proto\" \n\x0fQuestionRequest\x12\r\n\x05query\x18\x01 \x01(\t\"!\n\x10QuestionResponse\x12\r\n\x05query\x18\x01 \x01(\t2L\n\x0fQuestionService\x12\x39\n\x0cUnaryRequest\x12\x10.QuestionRequest\x1a\x11.QuestionResponse\"\x00(\x01\x30\x01\x62\x06proto3')
 )
 
 
@@ -64,7 +64,7 @@ _QUESTIONRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='reply', full_name='QuestionResponse.reply', index=0,
+      name='query', full_name='QuestionResponse.query', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -113,7 +113,7 @@ _QUESTIONSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   options=None,
   serialized_start=93,
-  serialized_end=167,
+  serialized_end=169,
   methods=[
   _descriptor.MethodDescriptor(
     name='UnaryRequest',

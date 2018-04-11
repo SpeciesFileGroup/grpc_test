@@ -16,7 +16,7 @@ class QuestionServiceStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.UnaryRequest = channel.unary_stream(
+    self.UnaryRequest = channel.stream_stream(
         '/QuestionService/UnaryRequest',
         request_serializer=questionstream__pb2.QuestionRequest.SerializeToString,
         response_deserializer=questionstream__pb2.QuestionResponse.FromString,
@@ -29,7 +29,7 @@ class QuestionServiceServicer(object):
   Details on what these are can be found at https://grpc.io/docs/guides/concepts.html
   """
 
-  def UnaryRequest(self, request, context):
+  def UnaryRequest(self, request_iterator, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -39,7 +39,7 @@ class QuestionServiceServicer(object):
 
 def add_QuestionServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'UnaryRequest': grpc.unary_stream_rpc_method_handler(
+      'UnaryRequest': grpc.stream_stream_rpc_method_handler(
           servicer.UnaryRequest,
           request_deserializer=questionstream__pb2.QuestionRequest.FromString,
           response_serializer=questionstream__pb2.QuestionResponse.SerializeToString,
