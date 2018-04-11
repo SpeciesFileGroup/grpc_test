@@ -1,0 +1,1 @@
+['PLATE', 'VI', 'Fig', 'Actinotroeha', 'Species', 'A', '(Drawn', 'from', 'life', ')', ')', 'X', 'Oc', 'Camera', 'X', 'Fig', 'Actinotrocha', 'Species', 'B', '(Drawn', 'from', 'life', ')', 'Ob', 'X', 'Oc', 'Camera', 'X']

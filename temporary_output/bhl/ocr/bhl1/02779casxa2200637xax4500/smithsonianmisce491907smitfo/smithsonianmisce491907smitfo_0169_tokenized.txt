@@ -1,0 +1,1 @@
+['Smithsonian', 'Miscellaneous', 'Collections', 'PART', 'OF', 'VOLUME', 'XLIX', 'Report', 'on', 'the', 'Crustacea', '(Brachyura', 'and', 'Anomura)', 'Collected', 'by', 'the', 'North', 'Pacific', 'Exploring', 'Expedition', 'BY', 'WILLIAM', 'STIMPSON', 'Xu', 'i', 'CITY', 'OF', 'WASHINGTON', 'PUBLISHED', 'BY', 'THE', 'SMITHSONIAN', 'INSTITUTION']
