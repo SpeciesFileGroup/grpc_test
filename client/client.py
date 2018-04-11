@@ -14,8 +14,6 @@ import questionstream_pb2_grpc as qgrpc1
 
 pp = pprint.PrettyPrinter(indent=4)
 
-"""
-# This isn't actually used for anything right now
 def run(): 
 	channel = grpc.insecure_channel('localhost:50051')
 	stub = qgrpc.QuestionServiceStub(channel)
@@ -24,22 +22,20 @@ def run():
 		print("Server connection has failed")
 	else:
 		print("Server response received: " + str(response))
-"""
 
 def generate_stream(files):
 	for file in files:
 		with open(file, 'r') as my_file:
 			file_data = my_file.read().replace('\n','')
-			yield q.FileStream(file_name = file_data)
 			yield q1.QuestionRequest(query = file_data)
 
 #Creates a stream of requests, should be able to use this with any server
 # Due to some weird issues with node, I'm not able to generate the protobuf code, so as a workaround, the answer you get back and the message you send have the same field nanmed 'query'. Hacky, but i'm looking at how to fix it
 def run_stream(files): 
 	channel = grpc.insecure_channel('localhost:50051')
-	stub = qgrpc.QuestionServiceStub(channel)
+	stub = qgrpc1.QuestionServiceStub(channel)
 
-	answers = stub.CountWordsInFile(generate_stream(files))
+	answers = stub.UnaryRequest(generate_stream(files))
 	word_count = defaultdict(int)
 
 	i = 0

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='question.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x0equestion.proto\" \n\x0fQuestionRequest\x12\r\n\x05query\x18\x01 \x01(\t\"!\n\x10QuestionResponse\x12\r\n\x05reply\x18\x01 \x01(\t\"\x1f\n\nFileStream\x12\x11\n\tfile_name\x18\x01 \x01(\t\"\x1a\n\tWordCount\x12\r\n\x05\x63ount\x18\x01 \x01(\x05\x32{\n\x0fQuestionService\x12\x35\n\x0cUnaryRequest\x12\x10.QuestionRequest\x1a\x11.QuestionResponse\"\x00\x12\x31\n\x10\x43ountWordsInFile\x12\x0b.FileStream\x1a\n.WordCount\"\x00(\x01\x30\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x0equestion.proto\" \n\x0fQuestionRequest\x12\r\n\x05query\x18\x01 \x01(\t\"!\n\x10QuestionResponse\x12\r\n\x05reply\x18\x01 \x01(\t2F\n\x0fQuestionService\x12\x33\n\x0cUnaryRequest\x12\x10.QuestionRequest\x1a\x11.QuestionResponseb\x06proto3')
 )
 
 
@@ -86,72 +86,8 @@ _QUESTIONRESPONSE = _descriptor.Descriptor(
   serialized_end=85,
 )
 
-
-_FILESTREAM = _descriptor.Descriptor(
-  name='FileStream',
-  full_name='FileStream',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='file_name', full_name='FileStream.file_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=87,
-  serialized_end=118,
-)
-
-
-_WORDCOUNT = _descriptor.Descriptor(
-  name='WordCount',
-  full_name='WordCount',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='count', full_name='WordCount.count', index=0,
-      number=1, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=120,
-  serialized_end=146,
-)
-
 DESCRIPTOR.message_types_by_name['QuestionRequest'] = _QUESTIONREQUEST
 DESCRIPTOR.message_types_by_name['QuestionResponse'] = _QUESTIONRESPONSE
-DESCRIPTOR.message_types_by_name['FileStream'] = _FILESTREAM
-DESCRIPTOR.message_types_by_name['WordCount'] = _WORDCOUNT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 QuestionRequest = _reflection.GeneratedProtocolMessageType('QuestionRequest', (_message.Message,), dict(
@@ -168,20 +104,6 @@ QuestionResponse = _reflection.GeneratedProtocolMessageType('QuestionResponse', 
   ))
 _sym_db.RegisterMessage(QuestionResponse)
 
-FileStream = _reflection.GeneratedProtocolMessageType('FileStream', (_message.Message,), dict(
-  DESCRIPTOR = _FILESTREAM,
-  __module__ = 'question_pb2'
-  # @@protoc_insertion_point(class_scope:FileStream)
-  ))
-_sym_db.RegisterMessage(FileStream)
-
-WordCount = _reflection.GeneratedProtocolMessageType('WordCount', (_message.Message,), dict(
-  DESCRIPTOR = _WORDCOUNT,
-  __module__ = 'question_pb2'
-  # @@protoc_insertion_point(class_scope:WordCount)
-  ))
-_sym_db.RegisterMessage(WordCount)
-
 
 
 _QUESTIONSERVICE = _descriptor.ServiceDescriptor(
@@ -190,8 +112,8 @@ _QUESTIONSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=148,
-  serialized_end=271,
+  serialized_start=87,
+  serialized_end=157,
   methods=[
   _descriptor.MethodDescriptor(
     name='UnaryRequest',
@@ -200,15 +122,6 @@ _QUESTIONSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_QUESTIONREQUEST,
     output_type=_QUESTIONRESPONSE,
-    options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='CountWordsInFile',
-    full_name='QuestionService.CountWordsInFile',
-    index=1,
-    containing_service=None,
-    input_type=_FILESTREAM,
-    output_type=_WORDCOUNT,
     options=None,
   ),
 ])
