@@ -13,16 +13,33 @@ service MyService {
     rpc MyMethod1 (MyRequest) returns (MyResponse) {
     }
 
-    rpc MyMethod2 (MyRequest) returns (MyResponse) {
+    rpc MyMethod2 (InitialRequest) returns (InitialResponse) {
     }
 
     rpc MyMethod3 (stream MyRequest) returns (stream MyResponse) {
     }
 
-    rpc MyMethod4 (stream MyRequest) returns (stream MyResponse) {
+    rpc MyMethod4 (stream QueryRequest) returns (stream QueryResponse) {
     }
 
 
+}
+
+message InitialRequest {
+    int32 number_of_pages = 1;
+}
+
+message InitialResponse {
+    int32 count = 1;
+}
+
+message QueryRequest {
+    int32 offset = 1;
+}
+
+message QueryResponse {
+    repeated string page_names = 1;
+    repeated int64 page_count = 2;
 }
 
 message MyRequest {

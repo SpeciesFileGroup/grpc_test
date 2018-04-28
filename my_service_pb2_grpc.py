@@ -21,8 +21,8 @@ class MyServiceStub(object):
         )
     self.MyMethod2 = channel.unary_unary(
         '/handson.MyService/MyMethod2',
-        request_serializer=my__service__pb2.MyRequest.SerializeToString,
-        response_deserializer=my__service__pb2.MyResponse.FromString,
+        request_serializer=my__service__pb2.InitialRequest.SerializeToString,
+        response_deserializer=my__service__pb2.InitialResponse.FromString,
         )
     self.MyMethod3 = channel.stream_stream(
         '/handson.MyService/MyMethod3',
@@ -31,8 +31,8 @@ class MyServiceStub(object):
         )
     self.MyMethod4 = channel.stream_stream(
         '/handson.MyService/MyMethod4',
-        request_serializer=my__service__pb2.MyRequest.SerializeToString,
-        response_deserializer=my__service__pb2.MyResponse.FromString,
+        request_serializer=my__service__pb2.QueryRequest.SerializeToString,
+        response_deserializer=my__service__pb2.QueryResponse.FromString,
         )
 
 
@@ -78,8 +78,8 @@ def add_MyServiceServicer_to_server(servicer, server):
       ),
       'MyMethod2': grpc.unary_unary_rpc_method_handler(
           servicer.MyMethod2,
-          request_deserializer=my__service__pb2.MyRequest.FromString,
-          response_serializer=my__service__pb2.MyResponse.SerializeToString,
+          request_deserializer=my__service__pb2.InitialRequest.FromString,
+          response_serializer=my__service__pb2.InitialResponse.SerializeToString,
       ),
       'MyMethod3': grpc.stream_stream_rpc_method_handler(
           servicer.MyMethod3,
@@ -88,8 +88,8 @@ def add_MyServiceServicer_to_server(servicer, server):
       ),
       'MyMethod4': grpc.stream_stream_rpc_method_handler(
           servicer.MyMethod4,
-          request_deserializer=my__service__pb2.MyRequest.FromString,
-          response_serializer=my__service__pb2.MyResponse.SerializeToString,
+          request_deserializer=my__service__pb2.QueryRequest.FromString,
+          response_serializer=my__service__pb2.QueryResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
