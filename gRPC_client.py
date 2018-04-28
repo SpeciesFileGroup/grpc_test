@@ -33,10 +33,6 @@ def generateRequests():
             continue
         reqs.append(my_service_pb2.MyRequest(filename=filename, filetext=lines[0], count=123))
 
-    # reqs = [my_service_pb2.MyRequest(filename='Alexandre', count=123), my_service_pb2.MyRequest(filename='Maria', count=123),
-    #         my_service_pb2.MyRequest(filename='Eleuterio', count=123), my_service_pb2.MyRequest(filename='Lucebiane', count=123),
-    #         my_service_pb2.MyRequest(filename='Ana Carolina', count=123)]
-
     for req in reqs:
         yield req
         # time.sleep(random.uniform(1, 2))
@@ -47,8 +43,6 @@ def main():
 
     client = gRPCClient()
 
-    # print(client.method1('Alexandre', 123))
-    # print(client.method2('Maria', 123))
 
     res = client.method3(generateRequests())
 

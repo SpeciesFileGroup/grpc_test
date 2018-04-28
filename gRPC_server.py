@@ -5,6 +5,7 @@ import grpc
 import my_module
 import my_service_pb2 as my_service_pb2
 import my_service_pb2_grpc as my_service_pb2_grpc
+import psycopg2
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 

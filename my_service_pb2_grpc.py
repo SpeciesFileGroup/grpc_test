@@ -29,6 +29,11 @@ class MyServiceStub(object):
         request_serializer=my__service__pb2.MyRequest.SerializeToString,
         response_deserializer=my__service__pb2.MyResponse.FromString,
         )
+    self.MyMethod4 = channel.stream_stream(
+        '/handson.MyService/MyMethod4',
+        request_serializer=my__service__pb2.MyRequest.SerializeToString,
+        response_deserializer=my__service__pb2.MyResponse.FromString,
+        )
 
 
 class MyServiceServicer(object):
@@ -56,6 +61,13 @@ class MyServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def MyMethod4(self, request_iterator, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_MyServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -71,6 +83,11 @@ def add_MyServiceServicer_to_server(servicer, server):
       ),
       'MyMethod3': grpc.stream_stream_rpc_method_handler(
           servicer.MyMethod3,
+          request_deserializer=my__service__pb2.MyRequest.FromString,
+          response_serializer=my__service__pb2.MyResponse.SerializeToString,
+      ),
+      'MyMethod4': grpc.stream_stream_rpc_method_handler(
+          servicer.MyMethod4,
           request_deserializer=my__service__pb2.MyRequest.FromString,
           response_serializer=my__service__pb2.MyResponse.SerializeToString,
       ),

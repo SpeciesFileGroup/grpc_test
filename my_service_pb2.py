@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='my_service.proto',
   package='handson',
   syntax='proto3',
-  serialized_pb=_b('\n\x10my_service.proto\x12\x07handson\">\n\tMyRequest\x12\x10\n\x08\x66ilename\x18\x01 \x01(\t\x12\x10\n\x08\x66iletext\x18\x02 \x01(\t\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\"?\n\nMyResponse\x12\x10\n\x08\x66ilename\x18\x01 \x01(\t\x12\x10\n\x08\x66iletext\x18\x02 \x01(\t\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\x32\xb7\x01\n\tMyService\x12\x36\n\tMyMethod1\x12\x12.handson.MyRequest\x1a\x13.handson.MyResponse\"\x00\x12\x36\n\tMyMethod2\x12\x12.handson.MyRequest\x1a\x13.handson.MyResponse\"\x00\x12:\n\tMyMethod3\x12\x12.handson.MyRequest\x1a\x13.handson.MyResponse\"\x00(\x01\x30\x01\x42\x32\n\x18\x63om.alexandreesl.handsonB\x0eMyServiceProtoP\x01\xa2\x02\x03HLWb\x06proto3')
+  serialized_pb=_b('\n\x10my_service.proto\x12\x07handson\">\n\tMyRequest\x12\x10\n\x08\x66ilename\x18\x01 \x01(\t\x12\x10\n\x08\x66iletext\x18\x02 \x01(\t\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\"?\n\nMyResponse\x12\x10\n\x08\x66ilename\x18\x01 \x01(\t\x12\x10\n\x08\x66iletext\x18\x02 \x01(\t\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\x32\xf3\x01\n\tMyService\x12\x36\n\tMyMethod1\x12\x12.handson.MyRequest\x1a\x13.handson.MyResponse\"\x00\x12\x36\n\tMyMethod2\x12\x12.handson.MyRequest\x1a\x13.handson.MyResponse\"\x00\x12:\n\tMyMethod3\x12\x12.handson.MyRequest\x1a\x13.handson.MyResponse\"\x00(\x01\x30\x01\x12:\n\tMyMethod4\x12\x12.handson.MyRequest\x1a\x13.handson.MyResponse\"\x00(\x01\x30\x01\x42\x32\n\x18\x63om.alexandreesl.handsonB\x0eMyServiceProtoP\x01\xa2\x02\x03HLWb\x06proto3')
 )
 
 
@@ -143,7 +143,7 @@ _MYSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   options=None,
   serialized_start=159,
-  serialized_end=342,
+  serialized_end=402,
   methods=[
   _descriptor.MethodDescriptor(
     name='MyMethod1',
@@ -167,6 +167,15 @@ _MYSERVICE = _descriptor.ServiceDescriptor(
     name='MyMethod3',
     full_name='handson.MyService.MyMethod3',
     index=2,
+    containing_service=None,
+    input_type=_MYREQUEST,
+    output_type=_MYRESPONSE,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='MyMethod4',
+    full_name='handson.MyService.MyMethod4',
+    index=3,
     containing_service=None,
     input_type=_MYREQUEST,
     output_type=_MYRESPONSE,
